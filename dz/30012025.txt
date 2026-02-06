@@ -1,0 +1,6 @@
+https://git-scm.com/book/ru/v2
+https://training.github.com/downloads/ru/github-git-cheat-sheet/
+
+Создайте локальный репозиторий, свяжите его с вашим удаленным
+репозиторием на github.com. Скиньте в ответ на это ДЗ ссылку
+на ваш удаленный репозиторий.
