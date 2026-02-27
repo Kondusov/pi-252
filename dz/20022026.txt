@@ -1,0 +1,10 @@
+https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
+
+Сверстать HTML страницу.
+На ней:
+Заголовок
+текст
+изображение
+Ссылки
+Списки
+Форма связи (ВАЖНО)
