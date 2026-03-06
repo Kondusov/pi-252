@@ -1,0 +1,2 @@
+https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
+https://developer.mozilla.org/ru/docs/conflicting/Learn_web_development/Core/Styling_basics
