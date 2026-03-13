@@ -1,3 +1,4 @@
+// https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide
 let a;
 a = 1;
 b = 2
