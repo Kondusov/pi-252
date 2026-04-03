@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="user_name">
+        <input type="text" id="user_message">
+        <input type="submit">
+    </form>
+    <script>
+        let user_form = document.querySelector('form');
+        user_form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            let user_name = document.getElementById('user_name').value;
+            let user_message = document.getElementById('user_message').value;
+            document.innerHtml += user_name +" "+ user_message;
+        })
+    </script>
+</body>
+</html>
