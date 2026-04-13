@@ -1,0 +1,11 @@
+#DirectoryIndex    bindex.fp index.php index.html index.htm index.pl
+#Deny from all
+#Options -Indexes
+
+<Files private.txt>
+AuthType Basic  
+AuthName "Private zone. Only for administrator!"
+AuthGroupFile C:\openserver\domains\send/group
+AuthUserFile  C:\openserver\domains\send/pass/.htpasswd  
+require valid-user
+</Files>
