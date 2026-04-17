@@ -1,0 +1,37 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('admin', 'customer') DEFAULT 'customer',
+    name VARCHAR(255)
+);
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    price DECIMAL(10,2) NOT NULL,
+    image VARCHAR(255) DEFAULT 'placeholder.jpg',
+    size VARCHAR(20),
+    brand VARCHAR(100)
+);
+
+CREATE TABLE cart (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT DEFAULT 1,
+    size VARCHAR(10),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+);
+
+-- Тестовые товары
+INSERT INTO products (name, description, price, image, size, brand) VALUES
+('Nike Air Max', 'Классические кроссовки с амортизацией', 12990, 'nike_airmax.jpg', '41,42,43,44', 'Nike'),
+('Adidas Ultraboost', 'Беговые кроссовки с технологией Boost', 15990, 'adidas_ub.jpg', '40,41,42,43', 'Adidas'),
+('New Balance 574', 'Повседневные кроссовки ретро стиля', 8990, 'nb_574.jpg', '41,42,43,44,45', 'New Balance');
+
+-- Админ (пароль: admin123)
+INSERT INTO users (email, password, role, name) VALUES 
+('admin@shop.ru', 'admin123', 'admin', 'Администратор');
